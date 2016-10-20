@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang=''>
+<title>SpikeSortingTest.com</title>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<style type="text/css">
+html,body {
+	margin:0;
+	padding:0;
+	color:#000;
+	background:#D8D8D8 ;
+	text-align:center;
+}
+#outer {
+	width:800px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:25px;
+	border:1px solid #fff;
+	text-align:left;
+	position:relative;
+}
+* html #outer {width:750px;w\idth:748px}/* box model hack*/
+#inner {
+	border:1px solid #000;
+	padding:5px;
+	background:#fff;
+}
+#header {
+	height:173px;
+}
+.column {
+	float:left;
+	width:800px;
+	margin-left:22px;
+	display:inline;/*ie fix*/
+}
+
+#footer {
+	clear:both;
+	height:40px;
+	background-image:  url(images/footer.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#link1{
+	position:absolute;
+	top:150px;
+	left:20px;
+	width:46px
+	height:15px;
+}
+  ul {list-style: none;padding: 0px;margin: 0px;}
+  ul li {display: block;position: relative;float: left;border:1px solid #000}
+  li ul {display: none;}
+  ul li a {display: block;background: #0000FF;padding: 8px 15px 8px 15px;text-decoration: none;
+           white-space: nowrap;color: #fff;}
+  ul li a:hover {background: #3399FF;}
+  li:hover ul {display: block; position: absolute;}
+  li:hover li {float: none;}
+  li:hover a {background: #3399FF;}
+  li:hover li a:hover {background: #000;}
+  #drop-nav li ul li {border-top: 0px;}
+
+</style>
+</head>
+
+<body>
+<div id="outer"> 
+  <div id="inner"> 
+
+<p style="text-align: left;"><a title="Upload Sorts and Results" href="http://catubc.webfactional.com/" ><img src="http://www.spikesortingtest.com/static/images/header5.jpg" /></a></p>
+
+
+<ul id="drop-nav">
+  <li><a href="http://www.spikesortingtest.com/">Home</a></li>
+  <li><a href="http://www.spikesortingtest.com/datasets/">Datasets</a>
+    <ul>
+      <li><a href="http://www.spikesortingtest.com/datasets/">Biophysical Simulations</a></li>
+      <li><a href="http://www.spikesortingtest.com/datasets/">In Vitro</a></li>
+      <li><a href="http://www.spikesortingtest.com/datasets/">In Vivo - Synthesized</a></li>
+    </ul>
+  </li>
+  <li><a href="http://www.spikesortingtest.com/upload/">Upload Sorts</a>
+
+  </li>
+
+  <li><a href="http://www.spikesortingtest.com/process_sort/">Load Sorts</a>
+
+  </li>
+
+
+  <li><a href="http://www.spikesortingtest.com/metrics/">Metrics</a>
+  </li>
+  <li><a href="http://www.spikesortingtest.com/python_code/">Code</a>
+    <ul>
+      <li><a href="http://www.spikesortingtest.com/python_code/">Python Code</a></li>
+      <li><a href="">Matlab Code</a></li>
+    </ul>
+  </li>
+  <li><a href="http://www.spikesortingtest.com/docs/">Docs</a>
+  </li>
+
+  <li><a href="http://www.spikesortingtest.com/email/">Contact</a>
+    <ul>
+      <li><a href="http://www.spikesortingtest.com/frequent_questions/">Frequent Questions</a></li>
+      <li><a href="http://www.spikesortingtest.com/email/">Email Us</a></li>
+    </ul>
+  </li>
+</ul>
+<BR>
+<BR>
+<BR>
+
+
+
+<!-- -------------------------------------------- --BEGIN WEBPAGE -------------------------------------------------------  -->
+
+<h3><strong>Data Format</strong></h3>
+<p>Sorted data results <strong>must be provided</strong> as spike rasters in a text (or .csv) file with comma separated fields as follows (order of unit or spike times are not important): </p>
+<center>
+<table  border="1" width="785">
+<tbody>
+<td style="text-align: left;">
+<p>
+<li><span style="color: blue;">spike time</span> (seconds)</li>
+<li><span style="color: red;">unit id </span> (unique value, order not important)</li>
+<li><span style="color: green;">max channel</span> (of each spike or for entire unit; NB: First channel = 1 (not 0))</li></p>
+</p>
+</td>
+
+<td style="text-align: left;">
+<strong>
+...<br>
+<span style="color: blue;">237.60675</span>,  <span style="color: red;">55</span>,  <span style="color: green;"> 25</span><br>
+<span style="color: blue;">0.23565</span>,  <span style="color: red;">3</span>,  <span style="color: green;">2</span><br> 
+<span style="color: blue;">42.2995</span>, <span style="color: red;">136</span>, <span style="color: green;">10</span><br>
+...
+</strong>
+</td>
+
+</tbody>
+</table>
+</center>
+
+<p>A sample file (<a href="http://www.spikesortingtest.com/static/python_code/july_1_3A_test.csv" target="_blank">july_1_3A_test.csv</a>) shows the 3-column 
+format required to process your sort.</p>
+<p></p>Sorted rasters must be uploaded in the corresponding field below and a randomly generated filename will be provided which can retrieve your sorting results for up to 30-days.</p>
+
+<p>Please contact us for assistance with generating raster files or see our <a href="http://www.spikesortingtest.com/python_code/">code page</a> for scripts.</p>
+
+<br>
+<!-- ----------------------UPLOAD TABLES  --------------------------  -->
+<!-- <h3><strong>Upload Your Rasters </strong></h3> --!>
+
+<!-- <table style="height: 119px;" border="1" width="792"> -->
+<br>
+
+
+<!-- --------------------------------------- Allen Inst Datasets ------------------------------->
+<center><span style="color: blue; font-weight: bold;">Fully Biophysical - Rat S1</span><br>Mitelut C., Gratiy S., Anastassiou C. et al. (Allen Institute, Seattle, WA)</center><br>
+
+<table style="height: 119px;" border="1" width="792">
+
+<tbody>
+<tr>  
+<td style="text-align: center;"><strong>silico_0</strong></td>
+<td style="text-align: center;"><strong>silico_1</strong></td>
+</tr>
+
+<tr>
+<td style="text-align: left;">
+<strong>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <p>{{ form.non_field_errors }}</p>
+
+    <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+
+    <p>
+        {{ form.docfile.errors }}
+        {{ form.docfile }}
+    </p>
+    <p><input type="submit" name="silico_0" value="Upload"/></p>
+</form>
+</strong>
+</td>
+
+<td>
+
+<strong>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p>{{ form.non_field_errors }}</p>
+
+    <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+
+    <p>
+        {{ form.docfile.errors }}
+        {{ form.docfile }}
+    </p>
+
+    <p><input type="submit" name="silico_1" value="Upload"/></p>
+</form>
+</strong>
+</td>
+</tr>
+</tbody>
+</table>
+<br><br>
+
+<!-- --------------------------------------- JUNE 28 ------------------------------->
+
+<table style="height: 119px;" border="1" width="792">
+
+<tbody>
+<tr>  
+<td style="text-align: center;"><strong>june_28_3A</strong></td>
+<td style="text-align: center;"><strong>june_28_3B</strong></td>
+<td style="text-align: center;"><strong>june_28_3C</strong></td>
+
+</tr>
+
+<tr>
+<td>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <p>{{ form.non_field_errors }}</p>
+
+    <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+
+    <p>
+        {{ form.docfile.errors }}
+        {{ form.docfile }}
+    </p>
+    <p><input type="submit" name="june_28_3A" value="Upload"/></p>
+</form>
+</td>
+
+<td>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <p>{{ form.non_field_errors }}</p>
+
+    <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+
+    <p>
+        {{ form.docfile.errors }}
+        {{ form.docfile }}
+    </p>
+    <p><input type="submit" name="june_28_3B" value="Upload"/></p>
+</form>
+</td>
+
+<td>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <p>{{ form.non_field_errors }}</p>
+
+    <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+
+    <p>
+        {{ form.docfile.errors }}
+        {{ form.docfile }}
+    </p>
+    <p><input type="submit" name="june_28_3C" value="Upload"/></p>
+</form>
+</td>
+
+</tr>
+</tbody>
+</table>
+
+<br><br>
+<!-- --------------------------------------- JUNE 29 ------------------------------->
+
+<table style="height: 119px;" border="1" width="792">
+
+
+<tbody>
+<tr>  
+<td style="text-align: center;"><strong>june_29_3A</strong></td>
+<td style="text-align: center;"><strong>june_29_3B</strong></td>
+<td style="text-align: center;"><strong>june_29_3C</strong></td>
+
+</tr>
+
+<tr>
+<td>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <p>{{ form.non_field_errors }}</p>
+
+    <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+
+    <p>
+        {{ form.docfile.errors }}
+        {{ form.docfile }}
+    </p>
+    <p><input type="submit" name="june_29_3A" value="Upload"/></p>
+</form>
+</td>
+
+<td>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <p>{{ form.non_field_errors }}</p>
+
+    <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+
+    <p>
+        {{ form.docfile.errors }}
+        {{ form.docfile }}
+    </p>
+    <p><input type="submit" name="june_29_3B" value="Upload"/></p>
+</form>
+</td>
+
+<td>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <p>{{ form.non_field_errors }}</p>
+
+    <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+
+    <p>
+        {{ form.docfile.errors }}
+        {{ form.docfile }}
+    </p>
+    <p><input type="submit" name="june_29_3C" value="Upload"/></p>
+</form>
+</td>
+
+</tr>
+</tbody>
+</table>
+
+<br><br>
+<!-- --------------------------------------- JULY 1 ------------------------------->
+
+
+<table style="height: 119px;" border="1" width="792">
+
+
+<tbody>
+<tr>  
+<td style="text-align: center;"><strong>july_1_3A</strong></td>
+<td style="text-align: center;"><strong>july_1_3B</strong></td>
+<td style="text-align: center;"><strong>july_1_3C</strong></td>
+
+</tr>
+
+<tr>
+<td>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <p>{{ form.non_field_errors }}</p>
+
+    <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+
+    <p>
+        {{ form.docfile.errors }}
+        {{ form.docfile }}
+    </p>
+    <p><input type="submit" name="july_1_3A" value="Upload"/></p>
+</form>
+</td>
+
+<td>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <p>{{ form.non_field_errors }}</p>
+
+    <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+
+    <p>
+        {{ form.docfile.errors }}
+        {{ form.docfile }}
+    </p>
+    <p><input type="submit" name="july_1_3B" value="Upload"/></p>
+</form>
+</td>
+
+<td>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <p>{{ form.non_field_errors }}</p>
+
+    <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+
+    <p>
+        {{ form.docfile.errors }}
+        {{ form.docfile }}
+    </p>
+    <p><input type="submit" name="july_1_3C" value="Upload"/></p>
+</form>
+</td>
+
+</tr>
+</tbody>
+</table>
+
+<br><br>
+
+<!-- --------------------------------------- JULY 2 ------------------------------->
+
+<table style="height: 119px;" border="1" width="792">
+
+
+<tbody>
+<tr>  
+<td style="text-align: center;"><strong>july_2_3A</strong></td>
+<td style="text-align: center;"><strong>july_2_3B</strong></td>
+<td style="text-align: center;"><strong>july_2_3C</strong></td>
+
+</tr>
+
+<tr>
+<td>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <p>{{ form.non_field_errors }}</p>
+
+    <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+
+    <p>
+        {{ form.docfile.errors }}
+        {{ form.docfile }}
+    </p>
+    <p><input type="submit" name="july_2_3A" value="Upload"/></p>
+</form>
+</td>
+
+<td>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <p>{{ form.non_field_errors }}</p>
+
+    <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+
+    <p>
+        {{ form.docfile.errors }}
+        {{ form.docfile }}
+    </p>
+    <p><input type="submit" name="july_2_3B" value="Upload"/></p>
+</form>
+</td>
+
+<td>
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <p>{{ form.non_field_errors }}</p>
+
+    <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+
+    <p>
+        {{ form.docfile.errors }}
+        {{ form.docfile }}
+    </p>
+    <p><input type="submit" name="july_2_3C" value="Upload"/></p>
+</form>
+</td>
+
+</tr>
+</tbody>
+</table>
+
+
+<br><br>
+<br><br>
+
+
+</div>
+</div>
+</body>
+
+
+<!-- ----------------------- FOOTER ------------------- -->
+
+<br>
+<footer>
+<h3><a href="http://www.spikesortingtest.com/"><span style="text-decoration: underline;"><span style="color: blue;">www.spikesortingtest.com</span></span></a></h3>
+
+</footer>
+<br>
+
+</html>
+

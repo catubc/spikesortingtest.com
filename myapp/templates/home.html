@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang=''>
+<title>SpikeSortingTest.com</title>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<style type="text/css">
+html,body {
+	margin:0;
+	padding:0;
+	color:#000;
+	background:#D8D8D8 ;
+	text-align:center;
+}
+#outer {
+	width:800px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:25px;
+	border:1px solid #fff;
+	text-align:left;
+	position:relative;
+}
+* html #outer {width:750px;w\idth:748px}/* box model hack*/
+#inner {
+	border:1px solid #000;
+	padding:5px;
+	background:#fff;
+}
+#header {
+	height:173px;
+}
+.column {
+	float:left;
+	width:800px;
+	margin-left:22px;
+	display:inline;/*ie fix*/
+}
+
+#footer {
+	clear:both;
+	height:40px;
+	background-image:  url(images/footer.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#link1{
+	position:absolute;
+	top:150px;
+	left:20px;
+	width:46px
+	height:15px;
+}
+  ul {list-style: none;padding: 0px;margin: 0px;}
+  ul li {display: block;position: relative;float: left;border:1px solid #000}
+  li ul {display: none;}
+  ul li a {display: block;background: #0000FF;padding: 8px 15px 8px 15px;text-decoration: none;
+           white-space: nowrap;color: #fff;}
+  ul li a:hover {background: #3399FF;}
+  li:hover ul {display: block; position: absolute;}
+  li:hover li {float: none;}
+  li:hover a {background: #3399FF;}
+  li:hover li a:hover {background: #000;}
+  #drop-nav li ul li {border-top: 0px;}
+
+</style>
+</head>
+
+<body>
+<div id="outer"> 
+  <div id="inner"> 
+
+<p style="text-align: left;"><a title="Upload Sorts and Results" href="http://catubc.webfactional.com/" ><img src="http://www.spikesortingtest.com/static/images/header5.jpg" /></a></p>
+
+
+<ul id="drop-nav">
+  <li><a href="http://www.spikesortingtest.com/">Home</a></li>
+  <li><a href="http://www.spikesortingtest.com/datasets/">Datasets</a>
+    <ul>
+      <li><a href="http://www.spikesortingtest.com/datasets/">Biophysical Simulations</a></li>
+      <li><a href="http://www.spikesortingtest.com/datasets/">In Vitro</a></li>
+      <li><a href="http://www.spikesortingtest.com/datasets/">In Vivo - Synthesized</a></li>
+    </ul>
+  </li>
+  <li><a href="http://www.spikesortingtest.com/upload/">Upload Sorts</a>
+
+  </li>
+
+  <li><a href="http://www.spikesortingtest.com/process_sort/">Load Sorts</a>
+
+  </li>
+
+
+  <li><a href="http://www.spikesortingtest.com/metrics/">Metrics</a>
+  </li>
+  <li><a href="http://www.spikesortingtest.com/python_code/">Code</a>
+    <ul>
+      <li><a href="http://www.spikesortingtest.com/python_code/">Python Code</a></li>
+      <li><a href="">Matlab Code</a></li>
+    </ul>
+  </li>
+  <li><a href="http://www.spikesortingtest.com/docs/">Docs</a>
+  </li>
+
+  <li><a href="http://www.spikesortingtest.com/email/">Contact</a>
+    <ul>
+      <li><a href="http://www.spikesortingtest.com/frequent_questions/">Frequent Questions</a></li>
+      <li><a href="http://www.spikesortingtest.com/email/">Email Us</a></li>
+    </ul>
+  </li>
+</ul>
+<BR>
+<BR>
+<BR>
+
+
+
+<!-- -----------------------BEGIN WEBPAGE ------------------- -->
+
+<!--<h3><strong><span style="color: black;">Introduction</span></strong></h3>-->
+<p style="text-align: left;">Welcome to spikesortingtest.com, a ground truth dataset database for developing spike sorting benchmarks. 
+We aim to support the unbiased development of sorting algorithms through blind testing across multiple types of extracellular datasets. </p>
+
+<h3><strong><span style="color: black;">From Datasets to Sorting Results</span></strong></h3>
+<p style="text-align: left;">You can use this website by downloading and sorting a dataset and uploading your results to get instant feedback on your performance.  
+We provide metrics indicating (i) the percentage of correct spikes in each sorted unit (<strong>purity</strong>), (ii) the percentage of spikes that each unit captures from its best cell match 
+(<strong>completeness</strong>) and (iii) a Single Value Metric (<strong>SVM</strong>) capturing overall sorting quality.</p>
+<p style="text-align: left;"><img src="http://www.spikesortingtest.com/static/images/workflow.jpg" alt="workflow" width="754" height="235" /></p>
+
+<h3><a title="Datasets" href="http://www.spikesortingtest.com/datasets/" ><span style="text-decoration: underline;"><strong><span style="color: blue;">Download Datasets</span></strong></span></a></h3>
+<p style="text-align: left;">The datasets provided come from biophysically detailed <em>in silico</em> simulations (collaboration between the
+<a title="Allen Institute" href="https://www.alleninstitute.org/" target="_blank" ><span style="text-decoration: underline;"><span style="color: blue;">Allen Institute</a></span>
+and the 
+<a title="Neuroscience Gatway (NSG)" href="https://www.nsgportal.org/" target="_blank" ><span style="text-decoration: underline;"><span style="color: blue;">Neuroscience Gateway (NSG)</a></span>
+), simultaneous whole cell and extracellular <em>in vitro</em> 
+recordings and previously recorded and sorted <em>in vivo</em> recordings that were synthesized to make for challenging sortable data.</p>
+<p style="text-align: left;"><strong><em>in silico</em></strong>: biophysically detailed, simulated high-density electrode layout recordings</p>
+<p style="text-align: left;"><strong><em>in vitro</em></strong>: simultaneously patched and extracellularly recorded single cells</p>
+<p style="text-align: left;"><strong><em>in vivo</em></strong>: reconstructed recordings from previously sorted in vivo data</p>
+<p style="text-align: left;"><a title="Datasets" href="http://www.spikesortingtest.com/datasets/"><img src="http://www.spikesortingtest.com/static/images/datasets.jpg" alt="datasets" width="749" height="246" /></a></p>
+
+<h3><a title="Upload Results" href="http://www.spikesortingtest.com/upload/"><span style="text-decoration: underline;"><strong><span style="color: blue;">Upload Results</span></strong></span></a></h3>
+<p style="text-align: left;">Spike sorting results (i.e. spike rasters for sorted units) must be converted to a comma separated value (.csv or .txt) format containing: spike time 
+(in seconds), unit ID and the maximum amplitude channel of each spike in the unit (important for unit drift). 
+We provide <a href="http://www.spikesortingtest.com/python_code/">python code</a> for conversion and can also assist to convert your sorted data to the required format.</p>
+
+<p style="text-align: left;"><a title="Upload Sorts and Results" href="http://www.spikesortingtest.com/upload/" ><img src="http://www.spikesortingtest.com/static/images/format.jpg" alt="" width="622" height="298" /></a> </p>
+
+ </div>
+</div>
+</body>
+
+<!-- ----------------------- FOOTER ------------------- -->
+
+<br>
+<footer>
+<h3><a href="http://www.spikesortingtest.com/"><span style="text-decoration: underline;"><span style="color: blue;">www.spikesortingtest.com</span></span></a></h3>
+
+</footer>
+<br>
+
+</html>
